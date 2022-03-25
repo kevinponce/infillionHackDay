@@ -19,7 +19,7 @@ const config = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug: true,
+      debug: false,
     }
   },
   scene: [...Scenes.map(scene => new scene(shareConfig))],
