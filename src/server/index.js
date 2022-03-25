@@ -2,13 +2,18 @@ var express = require('express');
 var app = express();
 var server = require('http').Server(app);
 var path = require('path');
-var io = require('socket.io')(server, {
-  cors: {
-    origin: "http://localhost:8080",
-    methods: ["GET", "POST"]
-  }
-});
 
+let socketConfig = {};
+if (process.env.SOCKET_IO_URL == 'http://localhost:8081/') {
+  socketConfig = {
+    cors: {
+      origin: "http://localhost:8080",
+      methods: ["GET", "POST"]
+    }
+  };
+}
+
+var io = require('socket.io')(server, socketConfig);
 var players = {};
 
 app.use(express.static(path.join(__dirname, '../../public')));
