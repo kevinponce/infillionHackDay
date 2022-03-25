@@ -4,7 +4,7 @@ var server = require('http').Server(app);
 var path = require('path');
 
 let socketConfig = {};
-if (process.env.SOCKET_IO_URL == 'http://localhost:8081/') {
+if (process.env.SOCKET_IO_URL && process.env.SOCKET_IO_URL.includes('localhost')) {
   socketConfig = {
     cors: {
       origin: "http://localhost:8080",

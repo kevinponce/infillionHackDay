@@ -52,16 +52,34 @@ export default class PlayScene extends Phaser.Scene {
     this.map = {
       title: 'Test',
       platforms: [
-        { type: 'longPlatform', x: 20, y: 200, group: 'platforms' },
-        { type: 'mediumPlatform', x: 400, y: 380, group: 'platforms' },
-        { type: 'smallPlatform', x: 700, y: 90, group: 'platforms' },
+        { type: 'longPlatform', x: 20, y: 250, group: 'platforms' },
+        { type: 'mediumPlatform', x: 550, y: 380, group: 'platforms' },
+        { type: 'spikePlatform', x: 950, y: 90, group: 'deathPlatforms' },
+        { type: 'smallPlatform', x: 950, y: 380, group: 'platforms' },
         { type: 'boostPlatform', x: 300, y: 90, group: 'boostPlatforms' },
-        { type: 'frozenPlatform', x: 500, y: 200, group: 'frozenPlatforms' },
-        { type: 'redBlockSprite', x: 500, y: 100, group: 'mystryBlock' },        
-        { type: 'spikePlatform', x: 700, y: 400, group: 'deathPlatforms' },
-        { type: 'spikePlatform', x: 1000, y: 400, group: 'deathPlatforms' },
-        { type: 'spikePlatform', x: 1500, y: 100, group: 'deathPlatforms' },
-        { type: 'finishPlatform', x: 1400, y: 500, group: 'finishPlatforms' },
+        { type: 'frozenPlatform', x: 600, y: 200, group: 'frozenPlatforms' },
+
+        { type: 'boostPlatform', x: 1200, y: 250, group: 'boostPlatforms' },
+
+
+        { type: 'spikePlatform', x: 1400, y: 90, group: 'deathPlatforms' },
+        { type: 'spikePlatform', x: 1400, y: 300, group: 'deathPlatforms' },
+        { type: 'spikePlatform', x: 1400, y: 500, group: 'deathPlatforms' },
+
+        { type: 'smallPlatform', x: 1700, y: 400, group: 'platforms' },
+        { type: 'smallPlatform', x: 1900, y: 200, group: 'platforms' },
+
+        { type: 'frozenPlatform', x: 2100, y: 200, group: 'frozenPlatforms' },
+        { type: 'spikePlatform', x: 2500, y: 200, group: 'deathPlatforms' },
+
+        { type: 'smallPlatform', x: 2500, y: 500, group: 'platforms' },
+
+        { type: 'smallPlatform', x: 2700, y: 350, group: 'platforms' },
+        { type: 'smallPlatform', x: 2800, y: 150, group: 'platforms' },
+
+        { type: 'spikePlatform', x: 3000, y: 200, group: 'deathPlatforms' },
+        { type: 'finishPlatform', x: 3120, y: 220, group: 'finishPlatforms' },
+        { type: 'spikePlatform', x: 3240, y: 200, group: 'deathPlatforms' },
       ],
       enemies: [
         { x: 100, y: 100, range: [400, 450] },
