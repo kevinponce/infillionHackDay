@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server/index.js --exec babel-node",
+    "devBackend": "nodemon src/server/index.js --exec babel-node",
     "build": "webpack build --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "prod": "node src/server/index.js"
+    "start": "node src/server/index.js"
   },
   "author": "",
   "license": "ISC",
