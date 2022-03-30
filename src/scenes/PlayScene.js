@@ -31,6 +31,7 @@ export default class PlayScene extends Phaser.Scene {
     this.keyRight = null;
     this.keyUp = null;
     this.keySpace = null;
+    this.sentAt = Date.now();
 
     this.me = {
       color: ['red', 'blue', 'green', 'purple', 'orange','yellow'].sample(),
@@ -202,7 +203,11 @@ export default class PlayScene extends Phaser.Scene {
     this.me.y = this.sprite.y;
     this.me.velocityX = this.sprite.body.velocity.x;
     this.me.velocityY = this.sprite.body.velocity.y;
-    this.socket.emit('updatePlayer', this.me);
+
+    if ((Date.now() - this.sentAt) >= 70) {
+      this.sentAt = Date.now();
+      this.socket.emit('updatePlayer', this.me);
+    }
   }
 
   createPlayer() {
